@@ -1,10 +1,10 @@
 package ua.epam.homeTask10.abstractFactory.helicopter;
 
-import ua.epam.homeTask10.abstractFactory.AircraftEquipmentFactory;
+import ua.epam.homeTask10.abstractFactory.ArmedAircraftFactory;
 import ua.epam.homeTask10.abstractFactory.Engine;
 import ua.epam.homeTask10.abstractFactory.Weapon;
 
-public class HelicopterEquipmentFactory implements AircraftEquipmentFactory {
+public class HelicopterFactory implements ArmedAircraftFactory {
     @Override
     public Engine getEngine() {
         return new TurboShaftEngine();
@@ -13,5 +13,10 @@ public class HelicopterEquipmentFactory implements AircraftEquipmentFactory {
     @Override
     public Weapon getWeapon() {
         return new AntiTankMissile();
+    }
+
+    @Override
+    public Weapon getAdditionalWeapon() {
+        return new MachineGun();
     }
 }

@@ -1,10 +1,10 @@
 package ua.epam.homeTask10.abstractFactory.fighter;
 
-import ua.epam.homeTask10.abstractFactory.AircraftEquipmentFactory;
+import ua.epam.homeTask10.abstractFactory.ArmedAircraftFactory;
 import ua.epam.homeTask10.abstractFactory.Engine;
 import ua.epam.homeTask10.abstractFactory.Weapon;
 
-public class FighterEquipmentFactory implements AircraftEquipmentFactory {
+public class FighterFactory implements ArmedAircraftFactory {
     @Override
     public Engine getEngine() {
         return new TurboJet();
@@ -13,5 +13,10 @@ public class FighterEquipmentFactory implements AircraftEquipmentFactory {
     @Override
     public Weapon getWeapon() {
         return new Missile();
+    }
+
+    @Override
+    public Weapon getAdditionalWeapon() {
+        return new Gun();
     }
 }
