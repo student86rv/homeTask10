@@ -1,8 +1,8 @@
 package ua.epam.homeTask10.facade;
 
 public class Traffic {
-    Car car = new Car();
-    TrafficLight trafficLight = new TrafficLight();
+    private Car car = new Car();
+    private TrafficLight trafficLight = new TrafficLight();
 
     public void startTraffic() {
         trafficLight.startTraffic();
