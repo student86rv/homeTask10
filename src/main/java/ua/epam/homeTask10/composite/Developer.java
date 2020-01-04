@@ -1,4 +1,4 @@
-package ua.epam.homeTask10.bridge;
+package ua.epam.homeTask10.composite;
 
 @FunctionalInterface
 public interface Developer {
